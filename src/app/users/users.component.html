@@ -1,0 +1,13 @@
+
+<div class="cards">
+    <div class="card" *ngFor="let user of users">
+        <img [src]="user.avatar" alt="John" style="width:100%">
+        <h1>{{user.first_name}}</h1>
+        <p class="title">CEO & Founder, Example</p>
+        <p>Harvard University</p>
+        <p> {{user.email}}</p>
+        <p><button>Contact</button></p>
+      </div>
+</div>
+<mat-paginator [length]="totalUsers" [pageSize]="usersPerPage" [pageSizeOptions]="pageSizeOptions" (page)="onChangedPage($event)"></mat-paginator>
+
